@@ -28,12 +28,12 @@ public class TestFacebookLogin {
 	capabilities.setCapability("noReset",false);
 	AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 	driver.manage().timeouts().implicitlyWait(500,TimeUnit.SECONDS);
-	driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/login_username\")").sendKeys("(your-facebook-username)");
+	driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/login_username\")").sendKeys("your facebook username");
 	driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/login_password\")").click();
-    driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/login_password\")").sendKeys("(your-facebook-password)");
-    driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/login_login\").text(\"LOG IN\")").click();
-    driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/publisher_button0\").text(\"STATUS\")").click();
-    driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/status_text\").text(\"What's on your mind?\")").sendKeys("Hello world from Appium! ");
-    driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/composer_primary_named_button\").description(\"Post\")").click();
+	driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/login_password\")").sendKeys("your password");
+    driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/login_login\").text(\"Log In\")").click();
+    driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/publisher_button0\").text(\"Status\")").click();
+    driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/status_text\").text(\"What's on your mind?\")").sendKeys("Hello World from Newbie Appium");
+    driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.facebook.katana:id/primary_named_button\").description(\"Post\")").click();
 	}
 }
