@@ -1,2 +1,2 @@
 # example-for-appium
-An Example for Appium Article at welovebug.com
+An Example Code for Appium Article at welovebug.com
